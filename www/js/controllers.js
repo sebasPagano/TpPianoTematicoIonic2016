@@ -2,14 +2,17 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope,$timeout) {
 $scope.MisMensajes=[];
-
+$scope.miBoton = false;
  var messagesRef = new Firebase('https://tppiano-c5592.firebaseio.com/usuarios/');
 
+var todoOk = false;
 
 $scope.enviarUsuario = function()
 {
+$scope.miBoton = true;
   var name = $('#nameInput').val();
   messagesRef.push({usuario:name});
+  return todoOk;
 }
   
 

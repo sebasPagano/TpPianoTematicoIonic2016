@@ -1,6 +1,6 @@
 <ion-view view-title="Login">
   <ion-content class="padding">
-	<input type='text' id='nameInput' placeholder='Ingrese nombre'>
-	<button ng-click="enviarUsuario()">Enviar</button>
+	<input  type='text' id='nameInput' placeholder='Ingrese nombre'>
+	<button ng-click="enviarUsuario()" ng-model="Enviar" ng-disabled="miBoton">Enviar</button>
   </ion-content>
 </ion-view>
