@@ -5,9 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers','ngCordova'])
+angular.module('starter', ['ionic', 'starter.controllers'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform,$cordovaNativeAudio) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -19,6 +19,26 @@ angular.module('starter', ['ionic', 'starter.controllers','ngCordova'])
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
+    }
+    if(window.plugins && window.plugins.NativeAudio)
+    { 
+
+
+      $cordovaNativeAudio.preloadComplex('ayCaramba', 'audio/ayCaramba.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('bardeMoe', 'audio/bardeMoe.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('Burns', 'audio/Burns.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('Doh', 'audio/Doh.wav', 1, 1);
+      $cordovaNativeAudio.preloadComplex('Flanders', 'audio/Flanders.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('marge', 'audio/marge.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('Milkhouse', 'audio/Milkhouse.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('Opening', 'audio/Opening.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('PequenoDemonio', 'audio/PequenoDemonio.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('PuercoArana', 'audio/PuercoArana.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('RisaHomero', 'audio/RisaHomero.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('TomyYDaly', 'audio/TomyYDaly.mp3', 1, 1);
+
+
+
     }
   });
 })
