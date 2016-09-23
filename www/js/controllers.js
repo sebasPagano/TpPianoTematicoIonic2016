@@ -3,7 +3,7 @@ var sonido = '';
 angular.module('starter.controllers', ['ngCordova'])
 
 .controller('DashCtrl', function($scope,$timeout) {
-$scope.MisMensajes=[];
+/*$scope.MisMensajes=[];
 $scope.miBoton = false;
  var messagesRef = new Firebase('https://tppiano-c5592.firebaseio.com/usuarios/');
 
@@ -25,7 +25,7 @@ $scope.miBoton = true;
     console.log($scope.MisMensajes);
     });
 
-  });
+  });*/
 
 })
 
@@ -47,11 +47,33 @@ $scope.miBoton = true;
     $cordovaNativeAudio.play('ayCaramba');
      sonido= 'ayCaramba';
   }
-      $scope.bardeMoe= function () {
+      $scope.Eructo= function () {
     $cordovaNativeAudio.stop(sonido);
-    $cordovaNativeAudio.play('bardeMoe');
-     sonido= 'bardeMoe';
+    $cordovaNativeAudio.play('Eructo');
+     sonido= 'Eructo';
   }
+      $scope.Gorgory= function () {
+    $cordovaNativeAudio.stop(sonido);
+    $cordovaNativeAudio.play('Gorgory');
+     sonido= 'Gorgory';
+  }
+        $scope.Lisa= function () {
+    $cordovaNativeAudio.stop(sonido);
+    $cordovaNativeAudio.play('Lisa');
+     sonido= 'Lisa';
+  }
+        $scope.MorirMoe= function () {
+    $cordovaNativeAudio.stop(sonido);
+    $cordovaNativeAudio.play('MorirMoe');
+     sonido= 'MorirMoe';
+  }
+        $scope.Nelson= function () {
+    $cordovaNativeAudio.stop(sonido);
+    $cordovaNativeAudio.play('Nelson');
+     sonido= 'Nelson';
+  }
+
+
       $scope.Burns= function () {
     $cordovaNativeAudio.stop(sonido);
     $cordovaNativeAudio.play('Burns');
@@ -64,17 +86,8 @@ $scope.miBoton = true;
      sonido= 'Doh';
   }
 
-        $scope.Flanders= function () {
-    $cordovaNativeAudio.stop(sonido);
-    $cordovaNativeAudio.play('Flanders');
-     sonido= 'Flanders';
-  }
 
-        $scope.marge= function () {
-    $cordovaNativeAudio.stop(sonido);
-    $cordovaNativeAudio.play('marge');
-     sonido= 'marge';
-  }
+
         $scope.Milkhouse= function () {
     $cordovaNativeAudio.stop(sonido);
     $cordovaNativeAudio.play('Milkhouse');
@@ -87,21 +100,12 @@ $scope.miBoton = true;
      sonido= 'Opening';
   }
 
-          $scope.PuercoArana= function () {
-    $cordovaNativeAudio.stop(sonido);
-    $cordovaNativeAudio.play('PuercoArana');
-     sonido= 'PuercoArana';
-  }
           $scope.RisaHomero= function () {
     $cordovaNativeAudio.stop(sonido);
     $cordovaNativeAudio.play('RisaHomero');
      sonido= 'RisaHomero';
   }
-            $scope.TomyYDaly= function () {
-    $cordovaNativeAudio.stop(sonido);
-    $cordovaNativeAudio.play('TomyYDaly');
-     sonido= 'TomyYDaly';
-  }
+
         $scope.PequenoDemonio= function () {
     $cordovaNativeAudio.stop(sonido);
     $cordovaNativeAudio.play('PequenoDemonio');

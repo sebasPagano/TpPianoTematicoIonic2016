@@ -25,17 +25,20 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 
       $cordovaNativeAudio.preloadComplex('ayCaramba', 'audio/ayCaramba.mp3', 1, 1);
-      $cordovaNativeAudio.preloadComplex('bardeMoe', 'audio/bardeMoe.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('Eructo', 'audio/Eructo.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('Gorgory', 'audio/Gorgory.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('Lisa', 'audio/Lisa.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('MorirMoe', 'audio/MorirMoe.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('Nelson', 'audio/Nelson.mp3', 1, 1);
+
       $cordovaNativeAudio.preloadComplex('Burns', 'audio/Burns.mp3', 1, 1);
       $cordovaNativeAudio.preloadComplex('Doh', 'audio/Doh.wav', 1, 1);
-      $cordovaNativeAudio.preloadComplex('Flanders', 'audio/Flanders.mp3', 1, 1);
-      $cordovaNativeAudio.preloadComplex('marge', 'audio/marge.mp3', 1, 1);
+
       $cordovaNativeAudio.preloadComplex('Milkhouse', 'audio/Milkhouse.mp3', 1, 1);
       $cordovaNativeAudio.preloadComplex('Opening', 'audio/Opening.mp3', 1, 1);
       $cordovaNativeAudio.preloadComplex('PequenoDemonio', 'audio/PequenoDemonio.mp3', 1, 1);
-      $cordovaNativeAudio.preloadComplex('PuercoArana', 'audio/PuercoArana.mp3', 1, 1);
       $cordovaNativeAudio.preloadComplex('RisaHomero', 'audio/RisaHomero.mp3', 1, 1);
-      $cordovaNativeAudio.preloadComplex('TomyYDaly', 'audio/TomyYDaly.mp3', 1, 1);
+
 
 
 
