@@ -2,25 +2,12 @@
 var sonido = '';
 angular.module('starter.controllers', ['ngCordova'])
 
-.controller('DashCtrl', function($scope,$timeout,$ionicPlatform,$cordovaNativeAudio) {
-
-$ionicPlatform.ready(function(){
-  try
-  {
-    $cordovaNativeAudio.play('Opening');
-   
-  }
-  catch(ex)
-  {
-    console.log(ex);
-  }
+.controller('InicioCtrl', function($scope,$timeout,$ionicPlatform,$cordovaNativeAudio) {
 
 
-
-  })
 })
 
-.controller('ChatsCtrl', function($scope,$cordovaNativeAudio,$cordovaVibration,$ionicPlatform) {
+.controller('PianoCtrl', function($scope,$cordovaNativeAudio,$cordovaVibration,$ionicPlatform,$cordovaFile) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -29,7 +16,8 @@ $ionicPlatform.ready(function(){
   //$scope.$on('$ionicView.enter', function(e) {
 
   //});
-
+  
+  $scope.secuencia = [];
 
 
 
@@ -38,36 +26,43 @@ $ionicPlatform.ready(function(){
     $cordovaNativeAudio.play('ayCaramba');
     $cordovaVibration.vibrate(300);
      sonido= 'ayCaramba';
+     $scope.secuencia.push("ayCaramba"); 
   }
+
       $scope.Eructo= function () {
     $cordovaNativeAudio.stop(sonido);
     $cordovaNativeAudio.play('Eructo');
     $cordovaVibration.vibrate(300);
      sonido= 'Eructo';
+      $scope.secuencia.push("Eructo"); 
   }
       $scope.Gorgory= function () {
     $cordovaNativeAudio.stop(sonido);
     $cordovaNativeAudio.play('Gorgory');
     $cordovaVibration.vibrate(300);
      sonido= 'Gorgory';
+      $scope.secuencia.push("Gorgory"); 
   }
         $scope.Lisa= function () {
     $cordovaNativeAudio.stop(sonido);
     $cordovaNativeAudio.play('Lisa');
     $cordovaVibration.vibrate(300);
      sonido= 'Lisa';
+      $scope.secuencia.push("Lisa"); 
   }
         $scope.MorirMoe= function () {
     $cordovaNativeAudio.stop(sonido);
     $cordovaNativeAudio.play('MorirMoe');
     $cordovaVibration.vibrate(300);
     sonido= 'MorirMoe';
+     $scope.secuencia.push("MorirMoe"); 
   }
         $scope.Nelson= function () {
     $cordovaNativeAudio.stop(sonido);
     $cordovaNativeAudio.play('Nelson');
     $cordovaVibration.vibrate(300);
      sonido= 'Nelson';
+      $scope.secuencia.push("Nelson"); 
   }
 
 
@@ -76,6 +71,7 @@ $ionicPlatform.ready(function(){
     $cordovaNativeAudio.play('Burns');
     $cordovaVibration.vibrate(300);
      sonido= 'Burns';
+      $scope.secuencia.push("Burns"); 
   }
 
         $scope.Doh= function () {
@@ -83,6 +79,7 @@ $ionicPlatform.ready(function(){
     $cordovaNativeAudio.play('Doh');
     $cordovaVibration.vibrate(300);
      sonido= 'Doh';
+      $scope.secuencia.push("Doh"); 
   }
 
 
@@ -92,6 +89,7 @@ $ionicPlatform.ready(function(){
     $cordovaNativeAudio.play('Milkhouse');
     $cordovaVibration.vibrate(300);
      sonido= 'Milkhouse';
+      $scope.secuencia.push("Milkhouse"); 
   }
 
           $scope.Opening= function () {
@@ -99,6 +97,7 @@ $ionicPlatform.ready(function(){
     $cordovaNativeAudio.play('Opening');
     $cordovaVibration.vibrate(300);
      sonido= 'Opening';
+      $scope.secuencia.push("Opening"); 
   }
 
           $scope.RisaHomero= function () {
@@ -106,6 +105,7 @@ $ionicPlatform.ready(function(){
     $cordovaNativeAudio.play('RisaHomero');
     $cordovaVibration.vibrate(300);
      sonido= 'RisaHomero';
+      $scope.secuencia.push("RisaHomero"); 
   }
 
         $scope.PequenoDemonio= function () {
@@ -113,13 +113,23 @@ $ionicPlatform.ready(function(){
     $cordovaNativeAudio.play('PequenoDemonio');
     $cordovaVibration.vibrate(300);
      sonido= 'PequenoDemonio';
+      $scope.secuencia.push("PequenoDemonio"); 
   }
+        $scope.stop= function () {
+    $cordovaNativeAudio.stop(sonido);
+    
+  }
+        $scope.play= function () {
+    $cordovaNativeAudio.play(sonido);
+ 
+  }
+  
 
 
 
 
 })
-.controller('AccountCtrl', function($scope) {
+.controller('AutorCtrl', function($scope) {
 
 
 });
